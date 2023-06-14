@@ -2,87 +2,65 @@
 //  ContentView.swift
 //  HeathApp
 //
-//  Created by Nitin Bhilkar on 6/13/23.
+//  Created by Anok, Nicole, Shriyadita, and Kristell on 6/13/23.
 //
 
 import SwiftUI
-import CoreData
-//hi
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @State var nameInput: String = ""
+    @State var birthdayInput: String = ""
+    @State private var birthDate = Date()
+    @State private var signUp = "null"
+    @State private var display = false
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("item at. \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            ZStack {
+                Color(hue: 0.08, saturation: 0.3, brightness: 0.7)
+                    .ignoresSafeArea()
+                VStack{
+                    Spacer()
+                    Text("Welcome to ____!")
+                        .font(.system(size: 40))
+                        .fontWeight(.black)
+                        .foregroundColor(Color.white)
+                        .padding()
+                    
+                    
+                    Text("Name")
+                        .foregroundColor(Color.white)
+                    TextField("", text: $nameInput)
+                        .foregroundColor(Color.black)
+                        .frame(width: 300.0, height: 40.0)
+                        .background(Color.white)
+                        .padding()
+                    
+                    
+                    Text("Date of Birth")
+                        .foregroundColor(Color.white)
+                    DatePicker("", selection: $birthDate, in: ...Date(), displayedComponents: .date)
+                        .frame(width: 300.0, height: 50.0)
+                        .background(Color.white)
+                        .padding()
+                    
+                    Spacer()
+                    
+                  
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    
                 }
             }
-            Text("Select an item")
+        }
+        
+        
+    
+    
+
+
+
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
 
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-}
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
