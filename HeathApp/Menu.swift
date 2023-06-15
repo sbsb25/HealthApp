@@ -36,7 +36,7 @@ struct Menu: View {
                             .multilineTextAlignment(.center)
                             .padding()
                         VStack{
-                            NavigationLink(destination: Prescription()) {
+                            NavigationLink(destination: Journal()) {
                                 Text("Journal")
                                     .tint(.white)
                                     .padding()
