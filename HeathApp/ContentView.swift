@@ -13,10 +13,13 @@ struct ContentView: View {
     @State private var signUp = "null"
     @State private var display = false
     var body: some View {
+        NavigationStack {
             ZStack {
                 Color(hue: 0.08, saturation: 0.3, brightness: 0.7)
+                //figure out correct color
                     .ignoresSafeArea()
                 VStack{
+
                     Spacer()
                     Text("Welcome to ____!")
                         .font(.system(size: 40))
@@ -42,8 +45,15 @@ struct ContentView: View {
                         .padding()
                     
                     Spacer()
-                    
-                  
+                    NavigationLink(destination: menu()) {
+                        Text("Sign Up!")
+                            .tint(.white)
+                            .buttonStyle(
+                                .borderedProminent)
+                            .padding()
+                        //figure out how to make button border and also make edges of text field smooth
+                    }
+                }
                     }
                     
                 }

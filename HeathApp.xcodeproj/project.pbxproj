@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D411219B2A3A878D00F8DE0C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411219A2A3A878D00F8DE0C /* Menu.swift */; };
+		D411219D2A3A8CD100F8DE0C /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411219C2A3A8CD100F8DE0C /* menu.swift */; };
 		D5B03DC72A38F66E007BB1BF /* HeathAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B03DC62A38F66E007BB1BF /* HeathAppApp.swift */; };
 		D5B03DC92A38F66E007BB1BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B03DC82A38F66E007BB1BF /* ContentView.swift */; };
 		D5B03DCB2A38F670007BB1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B03DCA2A38F670007BB1BF /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		D411219A2A3A878D00F8DE0C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		D411219C2A3A8CD100F8DE0C /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 		D5B03DC32A38F66E007BB1BF /* HeathApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeathApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B03DC62A38F66E007BB1BF /* HeathAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeathAppApp.swift; sourceTree = "<group>"; };
 		D5B03DC82A38F66E007BB1BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		D5B03DBA2A38F66E007BB1BF = {
 			isa = PBXGroup;
 			children = (
+				D411219C2A3A8CD100F8DE0C /* menu.swift */,
 				D5B03DC52A38F66E007BB1BF /* HeathApp */,
 				D5B03DC42A38F66E007BB1BF /* Products */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				D5B03DD32A38F670007BB1BF /* HeathApp.xcdatamodeld in Sources */,
 				D5B03DD02A38F670007BB1BF /* Persistence.swift in Sources */,
+				D411219D2A3A8CD100F8DE0C /* menu.swift in Sources */,
 				D5B03DC92A38F66E007BB1BF /* ContentView.swift in Sources */,
 				D5B03DC72A38F66E007BB1BF /* HeathAppApp.swift in Sources */,
 				D411219B2A3A878D00F8DE0C /* Menu.swift in Sources */,

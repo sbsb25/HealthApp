@@ -1,0 +1,20 @@
+//
+//  menu.swift
+//  HeathApp
+//
+//  Created by Kristell Olivares on 6/14/23.
+//
+
+import SwiftUI
+
+struct menu: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct menu_Previews: PreviewProvider {
+    static var previews: some View {
+        menu()
+    }
+}
