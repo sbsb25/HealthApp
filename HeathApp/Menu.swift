@@ -51,8 +51,8 @@ struct Menu: View {
                                 .padding()
                             
                             VStack {
-                                NavigationLink(destination: Habit()) {
-                                    Text("Habbit Tracker")
+                                NavigationLink(destination: HabitTrackerAdd()) {
+                                    Text("Habit Tracker")
                                         .tint(.white)
                                         .padding()
                                         .frame(width: 300, height: 50)

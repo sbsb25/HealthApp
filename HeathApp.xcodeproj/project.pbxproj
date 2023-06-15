@@ -10,9 +10,10 @@
 		D411219D2A3A8CD100F8DE0C /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411219C2A3A8CD100F8DE0C /* menu.swift */; };
 		D41121A82A3B75DA00F8DE0C /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41121A72A3B75DA00F8DE0C /* Journal.swift */; };
 		D41121AA2A3B75E500F8DE0C /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41121A92A3B75E500F8DE0C /* Prescription.swift */; };
-		D41121AC2A3B763100F8DE0C /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41121AB2A3B763100F8DE0C /* Habit.swift */; };
 		D535A0692A3B68FB00390953 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D535A0682A3B68FB00390953 /* Menu.swift */; };
 		D535A06B2A3B69F200390953 /* HabitTrackerAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D535A06A2A3B69F200390953 /* HabitTrackerAdd.swift */; };
+		D535A08B2A3B911200390953 /* NewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D535A08A2A3B911200390953 /* NewHabitView.swift */; };
+		D535A08D2A3B954400390953 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D535A08C2A3B954400390953 /* Habit.swift */; };
 		D5B03DC72A38F66E007BB1BF /* HeathAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B03DC62A38F66E007BB1BF /* HeathAppApp.swift */; };
 		D5B03DC92A38F66E007BB1BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B03DC82A38F66E007BB1BF /* ContentView.swift */; };
 		D5B03DCB2A38F670007BB1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B03DCA2A38F670007BB1BF /* Assets.xcassets */; };
@@ -25,9 +26,10 @@
 		D411219C2A3A8CD100F8DE0C /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 		D41121A72A3B75DA00F8DE0C /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		D41121A92A3B75E500F8DE0C /* Prescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
-		D41121AB2A3B763100F8DE0C /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		D535A0682A3B68FB00390953 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		D535A06A2A3B69F200390953 /* HabitTrackerAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerAdd.swift; sourceTree = "<group>"; };
+		D535A08A2A3B911200390953 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
+		D535A08C2A3B954400390953 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		D5B03DC32A38F66E007BB1BF /* HeathApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeathApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B03DC62A38F66E007BB1BF /* HeathAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeathAppApp.swift; sourceTree = "<group>"; };
 		D5B03DC82A38F66E007BB1BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,8 +75,9 @@
 				D535A0682A3B68FB00390953 /* Menu.swift */,
 				D41121A72A3B75DA00F8DE0C /* Journal.swift */,
 				D41121A92A3B75E500F8DE0C /* Prescription.swift */,
-				D41121AB2A3B763100F8DE0C /* Habit.swift */,
+				D535A08C2A3B954400390953 /* Habit.swift */,
 				D535A06A2A3B69F200390953 /* HabitTrackerAdd.swift */,
+				D535A08A2A3B911200390953 /* NewHabitView.swift */,
 				D5B03DCA2A38F670007BB1BF /* Assets.xcassets */,
 				D5B03DCF2A38F670007BB1BF /* Persistence.swift */,
 				D5B03DD12A38F670007BB1BF /* HeathApp.xcdatamodeld */,
@@ -162,13 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5B03DD32A38F670007BB1BF /* HeathApp.xcdatamodeld in Sources */,
+				D535A08D2A3B954400390953 /* Habit.swift in Sources */,
 				D5B03DD02A38F670007BB1BF /* Persistence.swift in Sources */,
 				D41121A82A3B75DA00F8DE0C /* Journal.swift in Sources */,
 				D535A0692A3B68FB00390953 /* Menu.swift in Sources */,
 				D535A06B2A3B69F200390953 /* HabitTrackerAdd.swift in Sources */,
 				D41121AA2A3B75E500F8DE0C /* Prescription.swift in Sources */,
-				D41121AC2A3B763100F8DE0C /* Habit.swift in Sources */,
 				D411219D2A3A8CD100F8DE0C /* menu.swift in Sources */,
+				D535A08B2A3B911200390953 /* NewHabitView.swift in Sources */,
 				D5B03DC92A38F66E007BB1BF /* ContentView.swift in Sources */,
 				D5B03DC72A38F66E007BB1BF /* HeathAppApp.swift in Sources */,
 			);

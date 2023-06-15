@@ -10,14 +10,37 @@ import Foundation
 
 
 struct HabitTrackerAdd: View {
+@State var toDoHabits: [Habit] = []
+@State private var showNewHabit = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            HStack {
+                Text("Healthy Habits!")
+                     .font(.system(size: 40))
+                     .fontWeight(.black)
+                     
+                Button(action: {
+                    self.showNewHabit = true
+                }) {
+                Text("+")
+            
+                }
+               
+                .padding()
+                List {
+                        ForEach (toDoHabits) {Habit in
+                                Text(Habit.title)
+                            }
+                }
+            }
+            
+            
+
         }
-        .padding()
+        if showNewHabit {
+            NewHabitView(toDoHabits: $toDoHabits, title: "", isCompleted: false)
+                }
     }
 }
 

@@ -32,6 +32,7 @@ struct ContentView: View {
                     Text("Name")
                         .foregroundColor(Color(red: 0.355, green: 0.462, blue: 0.503))
                     TextField("", text: $nameInput)
+                        .multilineTextAlignment(.center)
                         .foregroundColor(Color.white)
                         .background(Color(red: 0.355, green: 0.462, blue: 0.503))
                         .padding()
