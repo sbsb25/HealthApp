@@ -17,19 +17,20 @@ struct HabitTrackerAdd: View {
             
             HStack {
                 Text("Healthy Habits!")
-                     .font(.system(size: 40))
-                     .fontWeight(.black)
-                     
+                    .font(.system(size: 40))
+                    .fontWeight(.black)
+                    .padding(.leading)
                 Button(action: {
                     self.showNewHabit = true
                 }) {
-                Text("+")
-            
+                    Text("+")
+                    
                 }
+            
                
-                .padding()
                 List {
-                        ForEach (toDoHabits) {Habit in
+                        ForEach (toDoHabits)
+                    {Habit in
                                 Text(Habit.title)
                             }
                 }
@@ -39,7 +40,7 @@ struct HabitTrackerAdd: View {
 
         }
         if showNewHabit {
-            NewHabitView(toDoHabits: $toDoHabits, title: "", isCompleted: false)
+            NewHabitView(showNewHabit: $showNewHabit, toDoHabits: $toDoHabits, title: "", isCompleted: false)
                 }
     }
 }

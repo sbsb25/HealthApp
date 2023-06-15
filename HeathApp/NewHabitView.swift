@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewHabitView: View {
+    @Binding var showNewHabit : Bool
     @Binding var toDoHabits: [Habit]
     @State var title: String
     @State var isCompleted: Bool
@@ -20,6 +21,7 @@ struct NewHabitView: View {
             Spacer()
             Button(action: {
                 self.addTask(title: self.title)
+                self.showNewHabit = false
             }) {
                 Text("Add")
             }
@@ -34,6 +36,6 @@ struct NewHabitView: View {
 
 struct NewHabitView_Previews: PreviewProvider {
     static var previews: some View {
-        NewHabitView(toDoHabits: .constant([]), title: "", isCompleted: false)
+        NewHabitView(showNewHabit: .constant(true), toDoHabits: .constant([]), title: "", isCompleted: false)
     }
 }
