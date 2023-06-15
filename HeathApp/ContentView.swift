@@ -1,11 +1,12 @@
 //
 //  ContentView.swift
-//  HeathApp
+//  homepage for app
 //
-//  Created by Anok, Nicole, Shriyadita, and Kristell on 6/13/23.
+//  Created by Kristell Olivares on 6/14/23.
 //
 
 import SwiftUI
+
 struct ContentView: View {
     @State var nameInput: String = ""
     @State var birthdayInput: String = ""
@@ -15,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(hue: 0.08, saturation: 0.3, brightness: 0.7)
+                Color(red: 1.0, green: 0.98, blue: 0.976)
                 //figure out correct color
                     .ignoresSafeArea()
                 VStack{
@@ -24,34 +25,42 @@ struct ContentView: View {
                     Text("Welcome to ____!")
                         .font(.system(size: 40))
                         .fontWeight(.black)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color(red: 0.355, green: 0.462, blue: 0.503))
                         .padding()
                     
                     
                     Text("Name")
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color(red: 0.355, green: 0.462, blue: 0.503))
                     TextField("", text: $nameInput)
-                        .foregroundColor(Color.black)
-                        .frame(width: 300.0, height: 40.0)
-                        .background(Color.white)
-                        .padding()
-                    
-                    
-                    Text("Date of Birth")
                         .foregroundColor(Color.white)
-                    DatePicker("", selection: $birthDate, in: ...Date(), displayedComponents: .date)
-                        .frame(width: 300.0, height: 50.0)
-                        .background(Color.white)
+                        .background(Color(red: 0.355, green: 0.462, blue: 0.503))
                         .padding()
+                        .frame(width: 300, height: 50)
+                        .background(Color(red: 0.355, green: 0.462, blue: 0.503))
+                        .cornerRadius(12)
+                                
+                    Text("Date of Birth")
+                        .foregroundColor(Color(red: 0.355, green: 0.462, blue: 0.503))
+                    DatePicker("", selection: $birthDate, in: ...Date(), displayedComponents: .date)
+                        .background(Color(red: 0.355, green: 0.462, blue: 0.503))
+
+                        .padding()
+                
+                        .frame(width: 300, height: 50)
+                        .background(Color(red: 0.355, green: 0.462, blue: 0.503))
+
+                        .cornerRadius(12)
+            
                     
                     Spacer()
-                    NavigationLink(destination: menu()) {
+                    NavigationLink(destination: Menu()) {
                         Text("Sign Up!")
                             .tint(.white)
-                            .buttonStyle(
-                                .borderedProminent)
                             .padding()
-                        //figure out how to make button border and also make edges of text field smooth
+                            .frame(width: 300, height: 50)
+                            .background(Color(red: 0.355, green: 0.462, blue: 0.503))
+                            .cornerRadius(12)
+                        //why it only says sign...
                     }
                 }
                     }
@@ -71,6 +80,8 @@ struct ContentView: View {
             ContentView()
         }
     }
+
+
 
 
 
