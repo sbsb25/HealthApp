@@ -43,8 +43,8 @@ struct HabitTrackerAdd: View {
                     Text("+")
                     
                 }
-            
-               
+                
+            }
                 List {
                         ForEach (toDoItems)
                     {Habit in
@@ -53,7 +53,7 @@ struct HabitTrackerAdd: View {
                     .onDelete(perform: deleteTask)
                 }
                 
-            }
+            
             
             
 
