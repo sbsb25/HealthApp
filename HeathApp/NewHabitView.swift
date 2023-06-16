@@ -13,17 +13,22 @@ struct NewHabitView: View {
     @State var title: String
     @State var isCompleted: Bool
     var body: some View {
-        VStack {
-            Text("      ")
-            Text("Add a new Habit!")
-            TextField("Enter the task description", text: $title)
-                .multilineTextAlignment(.center)
-            Spacer()
-            Button(action: {
-                self.addTask(title: self.title)
-                self.showNewHabit = false
-            }) {
-                Text("Add")
+        ZStack {
+            Color(red: 1.0, green: 0.98, blue: 0.976)
+            //figure out correct color
+                .ignoresSafeArea()
+            VStack {
+                Text("      ")
+                Text("Add a new Habit!")
+                TextField("Enter the task description", text: $title)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                Button(action: {
+                    self.addTask(title: self.title)
+                    self.showNewHabit = false
+                }) {
+                    Text("Add")
+                }
             }
         }
     }
