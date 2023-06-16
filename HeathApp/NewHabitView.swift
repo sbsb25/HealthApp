@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewHabitView: View {
+    @Environment(\.managedObjectContext) var context
     @Binding var showNewHabit : Bool
-    @Binding var toDoHabits: [Habit]
     @State var title: String
     @State var isCompleted: Bool
     var body: some View {
@@ -29,13 +29,21 @@ struct NewHabitView: View {
     }
     private func addTask(title: String, isImportant: Bool = false) {
             
-            let task = Habit(title: title, isCompleted: isCompleted)
-            toDoHabits.append(task)
+        let task = HabitX(context: context)
+        task.id = UUID()
+        task.title = title
+        task.isCompleted = isCompleted
+                
+        do {
+                    try context.save()
+        } catch {
+                    print(error)
+        }
         }
 }
 
 struct NewHabitView_Previews: PreviewProvider {
     static var previews: some View {
-        NewHabitView(showNewHabit: .constant(true), toDoHabits: .constant([]), title: "", isCompleted: false)
+        NewHabitView(showNewHabit: .constant(true), title: "", isCompleted: false)
     }
 }

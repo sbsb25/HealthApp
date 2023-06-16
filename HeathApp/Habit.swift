@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Habit: Identifiable{
+class Habit : Identifiable{
     var id = UUID()
     var title = ""
     var isCompleted = false

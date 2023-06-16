@@ -10,10 +10,23 @@ import Foundation
 
 
 struct HabitTrackerAdd: View {
+    @Environment(\.managedObjectContext) var context
+    private func deleteTask(offsets: IndexSet) {
+            withAnimation {
+                offsets.map { toDoItems[$0] }.forEach(context.delete)
+
+                do {
+                    try context.save()
+                } catch {
+                    print(error)
+                }
+            }
+        }
+
     @FetchRequest(
             entity: Habit.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \Habit.id, ascending: false) ])
         
-    var toDoItems: FetchedResults<Habit>
+    var toDoItems: FetchedResults<HabitX>
 @State private var showNewHabit = false
     var body: some View {
         VStack {
@@ -32,18 +45,19 @@ struct HabitTrackerAdd: View {
             
                
                 List {
-                        ForEach (toDoHabits)
+                        ForEach (toDoItems)
                     {Habit in
-                                Text(Habit.title)
+                        Text(Habit.title ?? "No title")
                             }
                 }
+                .onDelete(perform: deleteTask)
             }
             
             
 
         }
         if showNewHabit {
-            NewHabitView(showNewHabit: $showNewHabit, toDoHabits: $toDoHabits, title: "", isCompleted: false)
+            NewHabitView(showNewHabit: $showNewHabit, title: "", isCompleted: false)
                 }
     }
 }
