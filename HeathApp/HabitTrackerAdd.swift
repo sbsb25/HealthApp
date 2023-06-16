@@ -24,7 +24,7 @@ struct HabitTrackerAdd: View {
         }
 
     @FetchRequest(
-            entity: Habit.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \Habit.id, ascending: false) ])
+            entity: HabitX.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \HabitX.id, ascending: false) ])
         
     var toDoItems: FetchedResults<HabitX>
 @State private var showNewHabit = false
@@ -49,8 +49,9 @@ struct HabitTrackerAdd: View {
                     {Habit in
                         Text(Habit.title ?? "No title")
                             }
+                    .onDelete(perform: deleteTask)
                 }
-                .onDelete(perform: deleteTask)
+                
             }
             
             
