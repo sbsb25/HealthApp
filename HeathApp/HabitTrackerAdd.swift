@@ -35,6 +35,7 @@ struct HabitTrackerAdd: View {
                 Text("Healthy Habits!")
                     .font(.system(size: 40))
                     .fontWeight(.black)
+                    .foregroundColor(Color(red: 0.355, green: 0.462, blue: 0.503))
                     .padding(.leading)
                 Button(action: {
                     self.showNewHabit = true

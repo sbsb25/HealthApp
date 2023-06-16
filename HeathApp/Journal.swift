@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Journal: View {
+    @State var journalInput: String = ""
     var body: some View {
         ZStack {
             Color(red: 1.0, green: 0.98, blue: 0.976)
@@ -42,11 +43,12 @@ struct Journal: View {
                         Text("Excited ヾ( ˃ᴗ˂ )◞*").tag(5)
                         Text("Tired  ᶻ 𝗓 𐰁").tag(6)
                     } //picker
+                    //figure how to pick an emotion 
                     
                 } //hstack
                 .padding(.bottom, 0.50)
                 .offset(x:0.0, y:-570.0)
-                    TextField("Begin Journaling Here", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Begin Journaling Here", text: $journalInput)
                         .padding(.horizontal, 80.0)
                         .offset(x:15.0, y:-550.0)
                                           
