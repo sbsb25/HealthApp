@@ -30,7 +30,7 @@
 		D535A08A2A3B911200390953 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
 		D535A08C2A3B954400390953 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		D5A3BDBF2A3C301F008A9CEB /* Menu1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu1.swift; sourceTree = "<group>"; };
-		D5B03DC32A38F66E007BB1BF /* HeathApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeathApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B03DC32A38F66E007BB1BF /* Wellness Wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wellness Wave.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B03DC62A38F66E007BB1BF /* HeathAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeathAppApp.swift; sourceTree = "<group>"; };
 		D5B03DC82A38F66E007BB1BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D5B03DCA2A38F670007BB1BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		D5B03DC42A38F66E007BB1BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B03DC32A38F66E007BB1BF /* HeathApp.app */,
+				D5B03DC32A38F66E007BB1BF /* Wellness Wave.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5B03DC22A38F66E007BB1BF /* HeathApp */ = {
+		D5B03DC22A38F66E007BB1BF /* Wellness Wave */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B03DD62A38F670007BB1BF /* Build configuration list for PBXNativeTarget "HeathApp" */;
+			buildConfigurationList = D5B03DD62A38F670007BB1BF /* Build configuration list for PBXNativeTarget "Wellness Wave" */;
 			buildPhases = (
 				D5B03DBF2A38F66E007BB1BF /* Sources */,
 				D5B03DC02A38F66E007BB1BF /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = HeathApp;
+			name = "Wellness Wave";
 			productName = HeathApp;
-			productReference = D5B03DC32A38F66E007BB1BF /* HeathApp.app */;
+			productReference = D5B03DC32A38F66E007BB1BF /* Wellness Wave.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5B03DBE2A38F66E007BB1BF /* Build configuration list for PBXProject "HeathApp" */;
+			buildConfigurationList = D5B03DBE2A38F66E007BB1BF /* Build configuration list for PBXProject "Wellness Wave" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5B03DC22A38F66E007BB1BF /* HeathApp */,
+				D5B03DC22A38F66E007BB1BF /* Wellness Wave */,
 			);
 		};
 /* End PBXProject section */
@@ -356,7 +356,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5B03DBE2A38F66E007BB1BF /* Build configuration list for PBXProject "HeathApp" */ = {
+		D5B03DBE2A38F66E007BB1BF /* Build configuration list for PBXProject "Wellness Wave" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B03DD42A38F670007BB1BF /* Debug */,
@@ -365,7 +365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B03DD62A38F670007BB1BF /* Build configuration list for PBXNativeTarget "HeathApp" */ = {
+		D5B03DD62A38F670007BB1BF /* Build configuration list for PBXNativeTarget "Wellness Wave" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B03DD72A38F670007BB1BF /* Debug */,
