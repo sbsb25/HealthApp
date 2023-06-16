@@ -12,7 +12,6 @@ struct Menu: View {
         NavigationStack {
             ZStack {
                 Color(red: 1.0, green: 0.98, blue: 0.976)
-                //figure out correct color
                     .ignoresSafeArea()
                 VStack {
                     Text("What would you like to do today?")
