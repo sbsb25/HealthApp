@@ -10,7 +10,10 @@ import Foundation
 
 
 struct HabitTrackerAdd: View {
-@State var toDoHabits: [Habit] = []
+    @FetchRequest(
+            entity: Habit.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \Habit.id, ascending: false) ])
+        
+    var toDoItems: FetchedResults<Habit>
 @State private var showNewHabit = false
     var body: some View {
         VStack {
