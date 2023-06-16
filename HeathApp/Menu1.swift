@@ -4,10 +4,8 @@
 //
 //  Created by Kristell Olivares on 6/15/23.
 //
-
 import SwiftUI
-
-struct Menu: View {
+struct Menu1: View {
     var body: some View {
         NavigationStack {
             ZStack {
@@ -71,9 +69,9 @@ struct Menu: View {
             
         }
     }
-    struct Menu_Previews: PreviewProvider {
+    struct Menu1_Previews: PreviewProvider {
         static var previews: some View {
-            Menu()
+            Menu1()
         }
     }
 }

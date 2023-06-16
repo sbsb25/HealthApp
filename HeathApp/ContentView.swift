@@ -54,7 +54,7 @@ struct ContentView: View {
             
                     
                     Spacer()
-                    NavigationLink(destination: Menu()) {
+                    NavigationLink(destination: Menu1()) {
                         Text("Sign Up!")
                             .tint(.white)
                             .padding()
